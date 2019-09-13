@@ -1,0 +1,23 @@
+package text1;
+
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		inner:
+		while(true)
+		{
+			Scanner a = new Scanner(System.in);
+			int year = a.nextInt();
+			if(year<1)
+				continue inner;
+			else if(year%4==0 && year%100!=0 || year%400==0)			
+				System.out.println("Yes");
+			else
+				System.out.println("No");
+			break;
+		}
+	}
+	
+}
