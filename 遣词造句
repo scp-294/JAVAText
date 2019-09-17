@@ -1,0 +1,22 @@
+package text1;
+
+import java.util.*;
+
+public class MadLibs{
+	
+	public static void main(String args[]){
+		System.out.println("_的龙向_的骑士_，输入的词用空格隔开");
+		Scanner scan = new Scanner(System.in);
+		int i;
+		String words[] = new String[3];
+		for(i=0; i<3; i++)
+		{
+			String temp = scan.next();
+			words[i] = temp;
+		}
+		System.out.println(words[0]+"的龙向"+words[1]+"的骑士"+words[2]);
+		scan.close();
+		
+	}
+}
+	
