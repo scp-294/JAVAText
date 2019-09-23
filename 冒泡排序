@@ -1,0 +1,44 @@
+package text1;
+
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		System.out.println("请输入10个整数，用回车隔开");
+		int[] num = new int[10];
+		int i, t;
+		Scanner scan = null;
+		
+		for(i=0; i<10; i++) 
+		{
+			scan =new Scanner(System.in);
+			t = scan.nextInt();
+			num[i] = t;
+		} 
+		
+		scan.close();
+		
+		for (i = 0; i < 10; ++i) {
+			boolean flag = false;
+            for (int j = 0; j < 10 - i - 1; ++j) 
+            { 
+                
+                if (num[j] > num[j + 1]) 
+                {        
+                    int temp = num[j];
+                    num[j] = num[j + 1];
+                    num[j + 1] = temp;
+                    flag = true;
+                }
+            }
+            if (!flag) break;
+        }
+
+		for(i=0; i<10; i++)
+		{
+			System.out.print(num[i]+" ");
+		}
+	}
+	
+}
